@@ -28,7 +28,7 @@ public class Contact
 	}
 
 	//Method for showing details
-	public void displaData() 
+	public void showdetails() 
 	{
 		System.out.println("First Name : "+firstName);
 		System.out.println("Last Name : "+lastName);
