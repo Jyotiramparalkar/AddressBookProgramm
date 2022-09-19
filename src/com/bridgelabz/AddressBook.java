@@ -35,13 +35,11 @@ class AddressBook {
         }
     }
 
-    public void editContact()
-    {
+    public void editContact(){
         System.out.println("Enter person name : ");
         String name = sc.next();
         for(Contact contact : contacts){
-            if(contact.getFirstName().equals(name) || contact.getLastName().equals(name))
-            {
+            if(contact.getFirstName().equals(name) || contact.getLastName().equals(name)){
                 System.out.println("What you want to edit : \n" +
                         "1.first name \t" +
                         "2.last name \t" +
@@ -100,7 +98,19 @@ class AddressBook {
             }
         }
         System.out.println(name + " not found!");
+    }
 
+    public void deleteContact(){
+        System.out.println("Enter person name : ");
+        String name = sc.next();
+        for(Contact contact : contacts){
+            if(contact.getFirstName().equals(name) || contact.getLastName().equals(name)){
+                contacts.remove(contact);
+                System.out.println(contact.getFirstName() +" removed!");
+                return;
+            }
+        }
+        System.out.println(name + " not found!");
     }
 
 }
